@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 96182d963095a0a43b5843c902886796
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: MADE Canvas
+  fontNames:
+  - MADE Canvas
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 76ef996b2df85aa40887344c7db58760, type: 3}
+  - {fileID: 12800000, guid: 153c2c1defcf00b47b08705225f81204, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

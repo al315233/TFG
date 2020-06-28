@@ -14,7 +14,7 @@ public class VolumeManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        VolumenSlider.value = GlobalData.GameVolume;
         // Assign Audio Source component to control it
         audioSrc = GetComponent<AudioSource>();
     }
@@ -22,6 +22,8 @@ public class VolumeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        GlobalData.GameVolume = VolumenSlider.value;
         // Setting volume option of Audio Source to be equal to musicVolume
         audioSrc.volume = VolumenSlider.value;
     }

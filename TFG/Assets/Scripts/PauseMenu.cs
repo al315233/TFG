@@ -6,9 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-
-    bool gamePaused;
-
     public GameObject Elements;
 
     //crear variable pública slider y asignarlo en el hierarchy
@@ -31,10 +28,18 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        VolumenSlider.value = GlobalData.GameVolume;
         Elements.SetActive(false);
 
         // Assign Audio Source component to control it
         audioSrc = GetComponent<AudioSource>();
+    }
+
+    private void LateUpdate()
+    {
+        Cursor.lockState = GlobalData.GamePaused || GlobalData.LevelsWithCursor.Contains(SceneManager.GetActiveScene().name) ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = GlobalData.GamePaused || GlobalData.LevelsWithCursor.Contains(SceneManager.GetActiveScene().name);
     }
 
     // Update is called once per frame
@@ -42,6 +47,9 @@ public class PauseMenu : MonoBehaviour
     {
         // Setting volume option of Audio Source to be equal to musicVolume
         audioSrc.volume = VolumenSlider.value;
+
+        GlobalData.GameVolume = VolumenSlider.value;
+
 
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -52,23 +60,25 @@ public class PauseMenu : MonoBehaviour
 
     void pauseGame()
     {
-        if (gamePaused) //Despausar juego
+        if (GlobalData.GamePaused) //Despausar juego
         {
-            Elements.SetActive(true);
+            //Cursor.visible = false;
+            Elements.SetActive(false);
             Time.timeScale = 1;
-            gamePaused = false;
+            GlobalData.GamePaused = false;
         }
         else //Pausar juego
         {
-            Elements.SetActive(false);
+            //Cursor.visible = true;
+            Elements.SetActive(true);
             Time.timeScale = 0;
-            gamePaused = true;
+            GlobalData.GamePaused = true;
         }
     }
 
     public void OnMainMenuClick()
     {
-        SceneManager.LoadScene("FirstMenu");
+        SceneManager.LoadScene(GlobalData.FIRSTMENU_SCENE_KEY);
     }
 
     public void OnBackButtonClick()

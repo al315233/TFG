@@ -140,13 +140,13 @@ public class Picture : MonoBehaviour
     public void playAnnPuzzle()
     {
         Debug.Log("first puzzle");
-        SceneManager.LoadScene("Puzzle1");
+        SceneManager.LoadScene("LABYRINTH_SCENE_KEY");
     }
 
     public void playKatiePuzzle()
     {
         Debug.Log("Katie Puzzle");
-        SceneManager.LoadScene("puzzle2.3");
+        SceneManager.LoadScene("JIGSAWPUZZLE_SCENE_KEY");
     }
 
     private void OnTriggerEnter(Collider other)

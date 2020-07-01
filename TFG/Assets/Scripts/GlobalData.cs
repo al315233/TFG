@@ -19,5 +19,8 @@ public class GlobalData : MonoBehaviour
 
     public static bool GamePaused;
 
-
 }
+
+
+
+

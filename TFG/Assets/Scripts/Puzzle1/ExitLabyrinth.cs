@@ -11,7 +11,7 @@ public class ExitLabyrinth : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            SceneManager.LoadScene("scene1");
+            SceneManager.LoadScene(GlobalData.MUSEUM_SCENE_KEY);
         }
     }
 }

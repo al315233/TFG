@@ -139,13 +139,13 @@ public class Picture : MonoBehaviour
 
     public void playAnnPuzzle()
     {
-        Debug.Log("first puzzle");
+        //Debug.Log("first puzzle");
         SceneManager.LoadScene(GlobalData.LABYRINTH_SCENE_KEY);
     }
 
     public void playKatiePuzzle()
     {
-        Debug.Log("Katie Puzzle");
+        //Debug.Log("Katie Puzzle");
         SceneManager.LoadScene(GlobalData.JIGSAWPUZZLE_SCENE_KEY);
     }
 

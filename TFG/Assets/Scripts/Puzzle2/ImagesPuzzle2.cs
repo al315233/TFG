@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ImagesPuzzle2 : MonoBehaviour
 {
@@ -37,6 +38,12 @@ public class ImagesPuzzle2 : MonoBehaviour
     int hiddenPieceIndex = INITIAL_HIDDEN_PIECE;
 
     Image pieceToMove;
+
+
+    //Cuando ganas
+    public GameObject FinalPanel;
+    string GuardarMovimientos;
+    public Text FinalText;
 
     // Start is called before the first frame update
     void Start()
@@ -139,8 +146,24 @@ public class ImagesPuzzle2 : MonoBehaviour
         {
 
             piecesMatrix[hiddenPieceIndex].color = Color.white;
-            //print("Has ganado");
-        }
+            GuardarMovimientos = contadorMovimientos.ToString();
+            FinalPanel.SetActive(true);
+            FinalText.text = "You have solved the puzzle in " + GuardarMovimientos + " movements. Press the Exit button to turn back to the main game.";
+
+            //if (Input.GetKeyDown(KeyCode.Space))
+            //{
+              //  SceneManager.LoadScene(GlobalData.MUSEUM_SCENE_KEY);
+            //}
+
+                //print("Has ganado");
+            }
+    }
+
+    //Botón para salir
+    public void ButtonExitPressed()
+    {
+        //Debug.Log("has play");
+        SceneManager.LoadScene(GlobalData.MUSEUM_SCENE_KEY);
     }
 
     void CambiarPiezas(Image a, Image b)

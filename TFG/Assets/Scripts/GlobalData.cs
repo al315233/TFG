@@ -12,7 +12,7 @@ public class GlobalData : MonoBehaviour
     public const string LABYRINTH_SCENE_KEY = "puzzle1";
     public const string CREDITSSCREEN_SCENE_KEY = "CreditsScene";
     public const string FIRSTMENU_SCENE_KEY = "FirstMenu";
-    public const string OPTIONSCREEN_SCENE_KEY = "OptionScreen";
+    public const string OPTIONSCREEN_SCENE_KEY = "OptionsScreen";
     public const string PAUSESCREEN_SCENE_KEY = "PauseScreen";
     public const string JIGSAWPUZZLE_SCENE_KEY = "puzzle2.3";
     public const string MUSEUM_SCENE_KEY = "scene1";

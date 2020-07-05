@@ -51,7 +51,7 @@ public class TextsPictures : MonoBehaviour
     {
         annM[0] = "Ann Masokinski.";
         annM[1] = "She is both an inventor and an artist.";
-        annM[2] = "Why is she famous for? She creaed the Hollow Flashlight. This device works with body heat, so it didn’t need any type of electricity.";
+        annM[2] = "Why is she famous for? She creaed the Hollow Flashlight. This device works with body heat, so it didn’t need any type of electricity. Press key E to play the puzzle.";
     }
 
     void sentencesOfKatieB()

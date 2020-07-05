@@ -85,7 +85,6 @@
     <Compile Include="Assets\Scripts\Puzzle1\ExitLabyrinth.cs" />
     <Compile Include="Assets\Scripts\Puzzle2\ImagesPuzzle2.cs" />
     <Compile Include="Assets\Scripts\Puzzle2\Puzzle.cs" />
-    <Compile Include="Assets\Scripts\Puzzle2\Sensores.cs" />
     <Compile Include="Assets\Scripts\TextsPictures.cs" />
     <Compile Include="Assets\Scripts\VolumeManager.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />

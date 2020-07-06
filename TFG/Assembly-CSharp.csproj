@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\Puzzle2\Puzzle.cs" />
     <Compile Include="Assets\Scripts\TextsPictures.cs" />
     <Compile Include="Assets\Scripts\VolumeManager.cs" />
+    <Compile Include="Assets\Scripts\VolumeSettings.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/maril/Documents/GitHub/TFG/TFG/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
